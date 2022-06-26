@@ -5,10 +5,14 @@ spin_version = "1"
 trigger = {type = "http", base = "/"}
 version = "1.0.0"
 
+[config]
+discord_bot_token = {required = true}
+discord_pub_key = {required = true}
+
 [[component]]
 allowed_http_hosts = ["https://discord.com/api/v10/applications"]
 description = "A simple component that returns hello."
-environment = {DISCORD_PUB_KEY = "your pub key", DISCORD_BOT_TOKEN = "your bot token"}
+environment = {DISCORD_PUB_KEY = "{{discord_pub_key}}", DISCORD_BOT_TOKEN = "{{discord_bot_token}}"}
 id = "hello"
 source = "target/wasm32-wasi/release/spinhelloworld.wasm"
 [component.trigger]

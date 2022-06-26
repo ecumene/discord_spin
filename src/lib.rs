@@ -176,7 +176,7 @@ fn handle_interaction(req: Request) -> Result<Response> {
                 .unwrap();
             }
             2 => {
-                println!("{}", event.reply("Hello from Spin!").unwrap());
+                event.reply("Hello from Spin!").unwrap();
             }
             _ => {
                 panic!("Unknown type.");
