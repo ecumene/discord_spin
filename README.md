@@ -15,7 +15,6 @@
 
 ## To Do:
 
-- [ ] Parameterize env variables via .env
 - [ ] Find a crate that can be used for types
 - [ ] Make a more ergonomic framework for creating commands and replying to
       interactions
